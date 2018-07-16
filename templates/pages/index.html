@@ -1,547 +1,800 @@
-<!DOCTYPE html>{% load static %}
-<html lang="zxx" class="no-js">
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <!-- Mobile Specific Meta -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Favicon-->
-    <link rel="shortcut icon" href="img/fav.png' %}">
-    <!-- Author Meta -->
-    <meta name="author" content="codepixer">
-    <!-- Meta Description -->
-    <meta name="description" content="">
-    <!-- Meta Keyword -->
-    <meta name="keywords" content="">
-    <!-- meta character set -->
-    <meta charset="UTF-8">
-    <!-- Site Title -->
-    <title>Estúdio ABC</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
-        <!--
-        CSS
-        ============================================= -->
-        <link rel="stylesheet" href="{% static 'css/linearicons.css' %}">
-        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
-        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
-        <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
-        <link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
-        <link rel="stylesheet" href="{% static 'css/hexagons.min.css' %}">
-        <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
-        <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
-        <link rel="stylesheet" href="{% static 'css/main.css' %}">
-    </head>
-    <body>
-          <header id="header" id="home">
-            <div class="header-top">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 col-sm-6 col-4 header-top-left no-padding">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                <li><a href="#"><i class="fa fa-behance"></i></a></li>
+    <title>Topbuilder Construction Template</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static "images/favicon.png" %}" type="image/x-icon" />
+    <!-- Bootstrap CSS -->
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+    <!-- Animate CSS -->
+    <link href="{% static "vendors/animate/animate.css" %}" rel="stylesheet">
+    <!-- Icon CSS-->
+	<link rel="stylesheet" href="{% static "vendors/font-awesome/css/font-awesome.min.css" %}">
+    <!-- Camera Slider -->
+    <link rel="stylesheet" href="{% static "vendors/camera-slider/camera.css" %}">
+    <!-- Owlcarousel CSS-->
+	<link rel="stylesheet" type="text/css" href="{% static "vendors/owl_carousel/owl.carousel.css" %}" media="all">
+
+    <!--Theme Styles CSS-->
+	<link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}" media="all" />
+
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="{% static "js/html5shiv.min.js" %}"></script>
+    <script src="{% static "js/respond.min.js" %}"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader"></div>
+
+	<!-- Top Header_Area -->
+	<section class="top_header_area">
+	    <div class="container">
+            <ul class="nav navbar-nav top_nav">
+                <li><a href="#"><i class="fa fa-phone"></i>+1 (168) 314 5016</a></li>
+                <li><a href="#"><i class="fa fa-envelope-o"></i>info@thethemspro.com</a></li>
+                <li><a href="#"><i class="fa fa-clock-o"></i>Mon - Sat 12:00 - 20:00</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right social_nav">
+                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            </ul>
+	    </div>
+	</section>
+	<!-- End Top Header_Area -->
+
+	<!-- Header_Area -->
+    <nav class="navbar navbar-default header_aera" id="main_navbar">
+        <div class="container">
+            <!-- searchForm -->
+            <div class="searchForm">
+                <form action="#" class="row m0">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                        <input type="search" name="search" class="form-control" placeholder="Type & Hit Enter">
+                        <span class="input-group-addon form_hide"><i class="fa fa-times"></i></span>
+                    </div>
+                </form>
+            </div><!-- End searchForm -->
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="col-md-2 p0">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#min_navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="{% static "images/logo.png" %}" alt=""></a>
+                </div>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="col-md-10 p0">
+                <div class="collapse navbar-collapse" id="min_navbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown submenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Home</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="index-2.html">Home 2</a></li>
                             </ul>
-                        </div>
-                        <div class="col-lg-6 col-sm-6 col-8 header-top-right no-padding">
-                            <a href="tel:+880 012 3654 896">+880 012 3654 896</a>
-                            <a href="mailto:support@colorlib.com">support@colorlib.com</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container main-menu">
-                <div class="row align-items-center justify-content-between d-flex">
-                  <div id="logo">
-                    <a href="index.html"><img src="{% static 'img/logo.png' %}" alt="" title="" /></a>
-                  </div>
-                  <nav id="nav-menu-container">
-                    <ul class="nav-menu">
-                      <li class="menu-active"><a href="/">Home</a></li>
-                      <li><a href="#">About</a></li>
-                      <li><a href="#">Service</a></li>
-                      <li><a href="#">Projects</a></li>
-                      <li class="menu-has-children"><a href="">Blog</a>
-                        <ul>
-                          <li><a href="#">Blog Home</a></li>
-                          <li><a href="#">Blog Single</a></li>
-                        </ul>
-                      </li>
-                      <li><a href="#">Contact</a></li>
-                      <li><a href="#">Elements</a></li>
+                        </li>
+                        <li class="dropdown submenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us</a>
+                            <ul class="dropdown-menu other_dropdwn">
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="about-2.html">About Us-2</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown submenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services</a>
+                            <ul class="dropdown-menu other_dropdwn">
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="services-2.html">Services-2</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Gallery</a></li>
+                        <li class="dropdown submenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="blog-2.html">Blog-2</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#" class="nav_searchFrom"><i class="fa fa-search"></i></a></li>
                     </ul>
-                  </nav><!-- #nav-menu-container -->
+                </div><!-- /.navbar-collapse -->
+            </div>
+        </div><!-- /.container -->
+    </nav>
+	<!-- End Header_Area -->
+
+    <!-- Slider area -->
+    <section class="slider_area row m0">
+        <div class="slider_inner">
+            <div data-thumb="images/slider-1.jpg" data-src="{% static "images/slider-1.jpg" %}">
+                <div class="camera_caption">
+                   <div class="container">
+                        <h5 class=" wow fadeInUp animated">Welcome to our</h5>
+                        <h3 class=" wow fadeInUp animated" data-wow-delay="0.5s">CLEAN, MODERN, MULTIPURPOSE THEME</h3>
+                        <p class=" wow fadeInUp animated" data-wow-delay="0.8s">Our team of professionals will help you turn your dream home or flat into a reality fast. The Love Boat promises something for everyone. Now the world don't move to the beat of just one</p>
+                        <a class=" wow fadeInUp animated" data-wow-delay="1s" href="#">Read More</a>
+                   </div>
                 </div>
             </div>
-          </header><!-- #header -->
+            <div data-thumb="images/slider-2.jpg" data-src="{% static "images/slider-2.jpg" %}">
+                <div class="camera_caption">
+                   <div class="container">
+                        <h5 class=" wow fadeInUp animated">Welcome to our</h5>
+                        <h3 class=" wow fadeInUp animated" data-wow-delay="0.5s">CLEAN ,MODERN, MULTIPURPOSE THEME</h3>
+                        <p class=" wow fadeInUp animated" data-wow-delay="0.8s">Our team of professionals will help you turn your dream home or flat into a reality fast. The Love Boat promises something for everyone. Now the world don't move to the beat of just one</p>
+                        <a class=" wow fadeInUp animated" data-wow-delay="1s" href="#">Read More</a>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Slider area -->
 
-        <!-- start banner Area -->
-        <section class="banner-area relative" id="home">
-            <div class="overlay overlay-bg"></div>
+    <!-- Professional Builde -->
+    <section class="professional_builder row">
+        <div class="container">
+           <div class="row builder_all">
+                <div class="col-md-3 col-sm-6 builder">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                    <h4>Professional Builde</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+                </div>
+                <div class="col-md-3 col-sm-6 builder">
+                    <i class="fa fa-building" aria-hidden="true"></i>
+                    <h4>We Deliver Quality</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+                </div>
+                <div class="col-md-3 col-sm-6 builder">
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    <h4>Always On Time</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+                </div>
+                <div class="col-md-3 col-sm-6 builder">
+                    <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                    <h4>We Are Pasionate</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+                </div>
+           </div>
+        </div>
+    </section>
+    <!-- End Professional Builde -->
+
+    <!-- About Us Area -->
+    <section class="about_us_area row">
+        <div class="container">
+            <div class="tittle wow fadeInUp">
+                <h2>ABOUT US</h2>
+                <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h4>
+            </div>
+            <div class="row about_row">
+                <div class="who_we_area col-md-7 col-sm-6">
+                    <div class="subtittle">
+                        <h2>WHO WE ARE</h2>
+                    </div>
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+                    <a href="#" class="button_all">Contact Now</a>
+                </div>
+                <div class="col-md-5 col-sm-6 about_client">
+                    <img src="{% static "images/about_client.jpg" %}" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End About Us Area -->
+
+    <!-- What ew offer Area -->
+    <section class="what_we_area row">
+        <div class="container">
+            <div class="tittle wow fadeInUp">
+                <h2>WHAT WE OFFER</h2>
+                <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h4>
+            </div>
+            <div class="row construction_iner">
+                <div class="col-md-4 col-sm-6 construction">
+                   <div class="cns-img">
+                        <img src="{% static "images/cns-1.jpg" %}" alt="">
+                   </div>
+                   <div class="cns-content">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                        <a href="#">BUILDING CONSTRUCTION</a>
+                        <p>Lorem Ipsum is simply dummy text of the print-ing and typesetting industry. Lorem Ipsum has been the industry's standard dummy </p>
+                   </div>
+                </div>
+                <div class="col-md-4 col-sm-6 construction">
+                   <div class="cns-img">
+                        <img src="{% static "images/cns-2.jpg" %}" alt="">
+                   </div>
+                   <div class="cns-content">
+                        <i class="fa fa-keyboard-o" aria-hidden="true"></i>
+                        <a href="#">PROJECT PLANNING</a>
+                        <p>Lorem Ipsum is simply dummy text of the print-ing and typesetting industry. Lorem Ipsum has been the industry's standard dummy </p>
+                   </div>
+                </div>
+                <div class="col-md-4 col-sm-6 construction">
+                   <div class="cns-img">
+                        <img src="{% static "images/cns-3.jpg" %}" alt="">
+                   </div>
+                   <div class="cns-content">
+                        <i class="fa fa-gavel" aria-hidden="true"></i>
+                        <a href="#">HOUSE RENOVATION</a>
+                        <p>Lorem Ipsum is simply dummy text of the print-ing and typesetting industry. Lorem Ipsum has been the industry's standard dummy </p>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End What ew offer Area -->
+
+    <!-- Our Features Area -->
+    <section class="our_feature_area">
+        <div class="container">
+            <div class="tittle wow fadeInUp">
+                <h2>Our Features</h2>
+                <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h4>
+            </div>
+            <div class="feature_row row">
+                <div class="col-md-6 feature_img">
+                    <img src="{% static "images/feature-man.jpg" %}" alt="">
+                </div>
+                <div class="col-md-6 feature_content">
+                    <div class="subtittle">
+                        <h2>WHY CHOOSE US</h2>
+                        <h5>There are many variations of passages of Lorem Ipsum available.</h5>
+                    </div>
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <i class="fa fa-wrench" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <a href="#">30+ YEARS OF EXPERIENCE</a>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting indus-try. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <i class="fa fa-rocket" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <a href="#">QUALIFIED EXPERTS</a>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting indus-try. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <a href="#">Best Customer Services</a>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting indus-try. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Our Features Area -->
+
+    <!-- Our Services Area -->
+    <section class="our_services_area">
+        <div class="container">
+            <div class="tittle wow fadeInUp">
+                <h2>Our Services</h2>
+                <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h4>
+            </div>
+            <div class="portfolio_inner_area">
+                <div class="portfolio_filter">
+                    <ul>
+                        <li data-filter="*" class="active"><a href=""> All</a></li>
+                        <li data-filter=".photography"><a href="">ARCHITECTURE</a></li>
+                        <li data-filter=".branding"><a href="">Building</a></li>
+                        <li data-filter=".webdesign"><a href="">CONSTRUCTION</a></li>
+                        <li data-filter=".adversting"><a href="">DESIGN</a></li>
+                        <li data-filter=".painting"><a href="">Painting</a></li>
+                    </ul>
+                </div>
+                <div class="portfolio_item">
+                   <div class="grid-sizer"></div>
+                    <div class="single_facilities col-xs-4 p0 painting photography adversting">
+                       <div class="single_facilities_inner">
+                          	<img src="{% static "images/gallery/sv-1.jpg" %}" alt="">
+                            <div class="gallery_hover">
+                                <h4>Construction</h4>
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-link" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single_facilities col-xs-4 p0 webdesign">
+                       <div class="single_facilities_inner">
+                          	<img src="{% static "images/gallery/sv-2.jpg" %}" alt="">
+                            <div class="gallery_hover">
+                                <h4>Construction</h4>
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-link" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single_facilities col-xs-4 painting p0 photography branding">
+                       <div class="single_facilities_inner">
+                          	<img src="{% static "images/gallery/sv-3.jpg" %}" alt="">
+                            <div class="gallery_hover">
+                                <h4>Construction</h4>
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-link" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single_facilities col-xs-4 p0 adversting webdesign adversting">
+                       <div class="single_facilities_inner">
+                          	<img src="{% static "images/gallery/sv-4.jpg" %}" alt="">
+                            <div class="gallery_hover">
+                                <h4>Construction</h4>
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-link" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single_facilities col-xs-4 p0 painting adversting branding">
+                       <div class="single_facilities_inner">
+                          	<img src="{% static "images/gallery/sv-5.jpg" %}" alt="">
+                            <div class="gallery_hover">
+                                <h4>Construction</h4>
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-link" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single_facilities col-xs-4 p0 webdesign photography magazine adversting">
+                       <div class="single_facilities_inner">
+                          	<img src="{% static "images/gallery/sv-6.jpg" %}" alt="">
+                            <div class="gallery_hover">
+                                <h4>Construction</h4>
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-link" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Our Services Area -->
+
+    <!-- Our Team Area -->
+    <section class="our_team_area">
+        <div class="container">
+            <div class="tittle wow fadeInUp">
+                <h2>Our Team</h2>
+                <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h4>
+            </div>
+            <div class="row team_row">
+                <div class="col-md-3 col-sm-6 wow fadeInUp">
+                   <div class="team_membar">
+                        <img src="{% static "images/team/tm-1.jpg" %}" alt="">
+                        <div class="team_content">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            </ul>
+                            <a href="#" class="name">Prodip Ghosh</a>
+                            <h6>Founder &amp; CEO</h6>
+                        </div>
+                   </div>
+                </div>
+                <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay="0.2s">
+                   <div class="team_membar">
+                        <img src="{% static "images/team/tm-2.jpg" %}" alt="">
+                        <div class="team_content">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            </ul>
+                            <a href="#" class="name">Emran Khan</a>
+                            <h6>Web-Developer</h6>
+                        </div>
+                   </div>
+                </div>
+                <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                   <div class="team_membar">
+                        <img src="{% static "images/team/tm-3.jpg" %}" alt="">
+                        <div class="team_content">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            </ul>
+                            <a href="#" class="name">Prodip Ghosh</a>
+                            <h6>Founder &amp; CEO</h6>
+                        </div>
+                   </div>
+                </div>
+                <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay="0.4s">
+                   <div class="team_membar">
+                        <img src="{% static "images/team/tm-4.jpg" %}" alt="">
+                        <div class="team_content">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            </ul>
+                            <a href="#" class="name">Jakaria Khan</a>
+                            <h6>Founder &amp; CEO</h6>
+                        </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Our Team Area -->
+
+    <!-- Our Achievments Area -->
+    <section class="our_achievments_area" data-stellar-background-ratio="0.3">
+        <div class="container">
+            <div class="tittle wow fadeInUp">
+                <h2>Our Achievments</h2>
+                <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h4>
+            </div>
+            <div class="achievments_row row">
+                <div class="col-md-3 col-sm-6 p0 completed">
+                    <i class="fa fa-connectdevelop" aria-hidden="true"></i>
+                    <span class="counter">800</span>
+                    <h6>PROJECT COMPLETED</h6>
+                </div>
+                <div class="col-md-3 col-sm-6 p0 completed">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                    <span class="counter">230</span>
+                    <h6>HOUSE RENOVATIONS</h6>
+                </div>
+                <div class="col-md-3 col-sm-6 p0 completed">
+                    <i class="fa fa-child" aria-hidden="true"></i>
+                    <span class="counter">1390</span>
+                    <h6>WORKERS EMPLOYED</h6>
+                </div>
+                <div class="col-md-3 col-sm-6 p0 completed">
+                    <i class="fa fa-trophy" aria-hidden="true"></i>
+                    <span class="counter">125</span>
+                    <h6>AWARDS WON</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Our Achievments Area -->
+
+    <!-- Our Testimonial Area -->
+    <section class="testimonial_area row">
+        <div class="container">
+            <div class="tittle wow fadeInUp">
+                <h2>Our TESTIMONIALS</h2>
+                <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h4>
+            </div>
+            <div class="testimonial_carosel">
+                <div class="item">
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src="{% static "images/testimonial-2.jpg" %}" alt="">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Emran Khan</h4>
+                            <h6>Web Developer</h6>
+                        </div>
+                    </div>
+                    <p><i class="fa fa-quote-right" aria-hidden="true"></i>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio<i class="fa fa-quote-left" aria-hidden="true"></i></p>
+                </div>
+                <div class="item">
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src="{% static "images/testimonial-3.jpg" %}" alt="">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Emran Khan</h4>
+                            <h6>Web Developer</h6>
+                        </div>
+                    </div>
+                    <p><i class="fa fa-quote-right" aria-hidden="true"></i>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio<i class="fa fa-quote-left" aria-hidden="true"></i></p>
+                </div>
+                <div class="item">
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src="{% static "images/testimonial-1.jpg" %}" alt="">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Prodip ghosht</h4>
+                            <h6>Brand Manager</h6>
+                        </div>
+                    </div>
+                    <p><i class="fa fa-quote-right" aria-hidden="true"></i>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio<i class="fa fa-quote-left" aria-hidden="true"></i></p>
+                </div>
+                <div class="item">
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src="{% static "images/testimonial-2.jpg" %}" alt="">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Jakaria Khan</h4>
+                            <h6>Brand Manager</h6>
+                        </div>
+                    </div>
+                    <p><i class="fa fa-quote-right" aria-hidden="true"></i>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio<i class="fa fa-quote-left" aria-hidden="true"></i></p>
+                </div>
+                <div class="item">
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src="{% static "images/testimonial-1.jpg" %}" alt="">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Prodip ghosht</h4>
+                            <h6>Brand Manager</h6>
+                        </div>
+                    </div>
+                    <p><i class="fa fa-quote-right" aria-hidden="true"></i>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio<i class="fa fa-quote-left" aria-hidden="true"></i></p>
+                </div>
+                <div class="item">
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src="{% static "images/testimonial-2.jpg" %}" alt="">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Jakaria Khan</h4>
+                            <h6>Brand Manager</h6>
+                        </div>
+                    </div>
+                    <p><i class="fa fa-quote-right" aria-hidden="true"></i>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio<i class="fa fa-quote-left" aria-hidden="true"></i></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Our testimonial Area -->
+
+    <!-- Our Featured Works Area -->
+    <section class="featured_works row" data-stellar-background-ratio="0.3">
+        <div class="tittle wow fadeInUp">
+            <h2>Our Featured Works</h2>
+            <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h4>
+        </div>
+        <div class="featured_gallery">
+            <div class="col-md-3 col-sm-4 col-xs-6 gallery_iner p0">
+                <img src="{% static "images/gallery/gl-1.jpg" %}" alt="">
+                <div class="gallery_hover">
+                    <h4>Bolt Apartments</h4>
+                    <a href="#">VIEW PROJECT</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 gallery_iner p0">
+                <img src="{% static "images/gallery/gl-2.jpg" %}" alt="">
+                <div class="gallery_hover">
+                    <h4>Bolt Apartments</h4>
+                    <a href="#">VIEW PROJECT</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 gallery_iner p0">
+                <img src="{% static "images/gallery/gl-3.jpg" %}" alt="">
+                <div class="gallery_hover">
+                    <h4>Bolt Apartments</h4>
+                    <a href="#">VIEW PROJECT</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 gallery_iner p0">
+                <img src="{% static "images/gallery/gl-4.jpg" %}" alt="">
+                <div class="gallery_hover">
+                    <h4>Bolt Apartments</h4>
+                    <a href="#">VIEW PROJECT</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 gallery_iner p0">
+                <img src="{% static "images/gallery/gl-5.jpg" %}" alt="">
+                <div class="gallery_hover">
+                    <h4>Bolt Apartments</h4>
+                    <a href="#">VIEW PROJECT</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 gallery_iner p0">
+                <img src="{% static "images/gallery/gl-6.jpg" %}" alt="">
+                <div class="gallery_hover">
+                    <h4>Bolt Apartments</h4>
+                    <a href="#">VIEW PROJECT</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 gallery_iner p0">
+                <img src="{% static "images/gallery/gl-7.jpg" %}" alt="">
+                <div class="gallery_hover">
+                    <h4>Bolt Apartments</h4>
+                    <a href="#">VIEW PROJECT</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 gallery_iner p0">
+                <img src="{% static "images/gallery/gl-8.jpg" %}" alt="">
+                <div class="gallery_hover">
+                    <h4>Bolt Apartments</h4>
+                    <a href="#">VIEW PROJECT</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Our Featured Works Area -->
+
+    <!-- Our Latest Blog Area -->
+    <section class="latest_blog_area">
+        <div class="container">
+            <div class="tittle wow fadeInUp">
+                <h2>Our Latest Blog</h2>
+                <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h4>
+            </div>
+            <div class="row latest_blog">
+                <div class="col-md-4 col-sm-6 blog_content">
+                    <img src="{% static "images/blog/lb-1.jpg" %}" alt="">
+                    <a href="#" class="blog_heading">Our Latest Project</a>
+                    <h4><small>by  </small><a href="#">Emran Khan</a><span>/</span><small>ON </small> October 15, 2016</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sagittis iaculis velit in tristique. Curabitur ac urna urna. Sed sollicitudin at nisi sed accumsan... <a href="#">Read More</a></p>
+                </div>
+                <div class="col-md-4 col-sm-6 blog_content">
+                    <img src="{% static "images/blog/lb-2.jpg" %}" alt="">
+                    <a href="#" class="blog_heading">Our Latest Project</a>
+                    <h4><small>by  </small><a href="#">Prodip Ghosh</a><span>/</span><small>ON </small> October 15, 2016</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sagittis iaculis velit in tristique. Curabitur ac urna urna. Sed sollicitudin at nisi sed accumsan... <a href="#">Read More</a></p>
+                </div>
+                <div class="col-md-4 col-sm-6 blog_content">
+                    <img src="{% static "images/blog/lb-3.jpg" %}" alt="">
+                    <a href="#" class="blog_heading">Our Latest Project</a>
+                    <h4><small>by  </small><a href="#">Prodip Ghosh</a><span>/</span><small>ON </small> October 15, 2016</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sagittis iaculis velit in tristique. Curabitur ac urna urna. Sed sollicitudin at nisi sed accumsan... <a href="#">Read More</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Our Latest Blog Area -->
+
+    <!-- Our Partners Area -->
+    <section class="our_partners_area">
+        <div class="container">
+            <div class="tittle wow fadeInUp">
+                <h2>Our Partners</h2>
+                <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h4>
+            </div>
+            <div class="partners">
+                <div class="item"><img src="{% static "images/client_logo/client_logo-1.png" %}" alt=""></div>
+                <div class="item"><img src="{% static "images/client_logo/client_logo-2.png" %}" alt=""></div>
+                <div class="item"><img src="{% static "images/client_logo/client_logo-3.png" %}" alt=""></div>
+                <div class="item"><img src="{% static "images/client_logo/client_logo-4.png" %}" alt=""></div>
+                <div class="item"><img src="{% static "images/client_logo/client_logo-5.png" %}" alt=""></div>
+            </div>
+        </div>
+        <div class="book_now_aera">
             <div class="container">
-                <div class="row fullscreen d-flex align-items-center justify-content-center">
-                    <div class="banner-content col-lg-12 col-md-12">
-                        <h6 class="text-uppercase">Don’t look further, here is the key</h6>
-                        <h1>
-                            We’re Industrial solution
-                        </h1>
-                        <p class="text-white">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et <br> dolore magna aliqua. Ut enim ad minim.  sed do eiusmod tempor incididunt.
-                        </p>
-                        <a href="#" class="primary-btn header-btn text-uppercase">Get Started</a>
+                <div class="row book_now">
+                    <div class="col-md-10 booking_text">
+                        <h4>Booking now if you need build your dream home.</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <div class="col-md-2 p0 book_bottun">
+                        <a href="#" class="button_all">book now</a>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- End banner Area -->
+        </div>
+    </section>
+    <!-- End Our Partners Area -->
 
-        <!-- Start cat Area -->
-        <section class="cat-area section-gap" id="feature">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="single-cat d-flex flex-column">
-                            <a href="#" class="hb-sm-margin mx-auto d-block"><span class="hb hb-sm inv hb-facebook-inv"><span class="lnr lnr-magic-wand"></span></span></a>
-                            <h4 class="mb-20" style="margin-top: 23px;">Maintenance</h4>
-                            <p>
-                                inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="single-cat">
-                            <a href="#" class="hb-sm-margin mx-auto d-block"><span class="hb hb-sm inv hb-facebook-inv"><span class="lnr lnr-rocket"></span></span></a>
-                            <h4 class="mt-40 mb-20">Residental Service</h4>
-                            <p>
-                                inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="single-cat">
-                            <a href="#" class="hb-sm-margin mx-auto d-block"><span class="hb hb-sm inv hb-facebook-inv"><span class="lnr lnr-bug"></span></span></a>
-                            <h4 class="mt-40 mb-20">Commercial Service</h4>
-                            <p>
-                                inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why.
-                            </p>
-                        </div>
-                    </div>
+    <!-- Footer Area -->
+    <footer class="footer_area">
+        <div class="container">
+            <div class="footer_row row">
+                <div class="col-md-3 col-sm-6 footer_about">
+                    <h2>ABOUT OUR COMPANY</h2>
+                    <img src="{% static "images/footer-logo.png" %}" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <ul class="socail_icon">
+                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 footer_about quick">
+                    <h2>Quick links</h2>
+                    <ul class="quick_link">
+                        <li><a href="#"><i class="fa fa-chevron-right"></i>Building Construction</a></li>
+                        <li><a href="#"><i class="fa fa-chevron-right"></i>Home Renovation</a></li>
+                        <li><a href="#"><i class="fa fa-chevron-right"></i>Hardwood Flooring</a></li>
+                        <li><a href="#"><i class="fa fa-chevron-right"></i>Repairing Of Roof</a></li>
+                        <li><a href="#"><i class="fa fa-chevron-right"></i>Commercial Construction</a></li>
+                        <li><a href="#"><i class="fa fa-chevron-right"></i>Concreate Transport</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 footer_about">
+                    <h2>Twitter Feed</h2>
+                    <a href="#" class="twitter">@colorlib: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</a>
+                    <a href="#" class="twitter">@colorlib: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</a>
+                </div>
+                <div class="col-md-3 col-sm-6 footer_about">
+                    <h2>CONTACT US</h2>
+                    <address>
+                        <p>Have questions, comments or just want to say hello:</p>
+                        <ul class="my_address">
+                            <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>info@thethemspro.com</a></li>
+                            <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i>+880 123 456 789</a></li>
+                            <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i><span>Sector # 10, Road # 05, Plot # 31, Uttara, Dhaka 1230 </span></a></li>
+                        </ul>
+                    </address>
                 </div>
             </div>
-        </section>
-        <!-- End cat Area -->
+        </div>
+        <div class="copyright_area">
+            Copyright 2017 All rights reserved. Designed by <a href="https://colorlib.com">Colorlib.</a>
+        </div>
+    </footer>
+    <!-- End Footer Area -->
 
-
-        <!-- Start home-about Area -->
-        <section class="home-about-area section-gap" id="about">
-            <div class="container">
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-lg-8 col-md-12 home-about-left">
-                        <h6>Brand new app to blow your mind</h6>
-                        <h1>
-                            We’ve made a life <br>
-                            that will change you
-                        </h1>
-                        <p class="sub">We are here to listen from you deliver exellence</p>
-                        <p class="pb-20">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp or incididunt ut labore et dolore magna aliqua. Ut enim ad minim. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.
-                        </p>
-                        <a class="primary-btn" href="#">Get Started Now</a>
-                    </div>
-                    <div class="col-lg-4 col-md-12 home-about-right relative">
-                        <form class="form-wrap" action="#">
-                            <h4 class="text-white pb-20">Request a Quote</h4>
-                            <div class="form-select" id="service-select"">
-                                <select>
-                                    <option value="1">Select Service</option>
-                                    <option value="2">Service One</option>
-                                    <option value="3">Service Two</option>
-                                    <option value="4">Service Three</option>
-                                    <option value="5">Service Four</option>
-                                </select>
-                            </div>
-                            <input type="text" class="form-control" placeholder="name">
-                            <input type="phone" class="form-control" placeholder="Phone Number">
-                            <input type="email" class="form-control" placeholder="Email Address">
-                            <textarea name="message" id="" cols="30" rows="5" placeholder="Message" class="form-control"></textarea>
-                            <button class="primary-btn">Request Free Quote</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End home-about Area -->
-
-
-        <!-- Start service Area -->
-        <section class="service-area section-gap" id="service">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-12 pb-30 header-text text-center">
-                        <h1 class="mb-10">Our Capturing Market Sectors</h1>
-                        <p>
-                            Who are in extremely love with eco friendly system..
-                        </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="single-service">
-                            <div class="thumb">
-                                <img scr="{% static 's1.jpg' %}" alt="">
-                            </div>
-                            <h4>Automotive Engineering</h4>
-                            <p>
-                                inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct women face higher conduct.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="single-service">
-                            <div class="thumb">
-                                <img scr="{% static 's2.jpg' %}" alt="">
-                            </div>
-                            <h4>Construction & Engineering</h4>
-                            <p>
-                                inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct women face higher conduct.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="single-service">
-                            <div class="thumb">
-                                <img scr="{% static 's3.jpg' %}" alt="">
-                            </div>
-                            <h4>Industrial Engineering</h4>
-                            <p>
-                                inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct women face higher conduct.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End service Area -->
-
-
-        <!-- Start faq Area -->
-        <section class="faq-area section-gap relative">
-            <div class="overlay overlay-bg"></div>
-            <div class="container">
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="single-faq">
-                            <div class="circle">
-                              <div class="inner"></div>
-                            </div>
-                            <h5><span class="counter">2</span>K+</h5>
-                            <p>
-                                Projects Completed
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="single-faq">
-                            <div class="circle">
-                              <div class="inner"></div>
-                            </div>
-                            <h5><span class="counter">5.5</span>K</h5>
-                            <p>
-                                Total Employees
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="single-faq">
-                            <div class="circle">
-                              <div class="inner"></div>
-                            </div>
-                            <h5 class="counter">959</h5>
-                            <p>
-                                Happy Clients
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="single-faq">
-                            <div class="circle">
-                              <div class="inner"></div>
-                            </div>
-                            <h5 class="counter">367</h5>
-                            <p>
-                                Tickets Submited
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End faq Area -->
-
-
-        <!-- Start project Area -->
-        <section class="project-area section-gap" id="project">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-8 pb-30 header-text text-center">
-                        <h1 class="mb-10">Latest Finished Projects</h1>
-                        <p>
-                            Who are in extremely love with eco friendly system..
-                        </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-8 col-md-8">
-                        <a href="img/p1.jpg' %}" class="img-gal">
-                            <img class="img-fluid single-project" scr="{% static 'p1.jpg' %}" alt="">
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-4">
-                        <a href="img/p2.jpg' %}" class="img-gal">
-                            <img class="img-fluid single-project" scr="{% static 'p2.jpg' %}" alt="">
-                        </a>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <a href="img/p3.jpg' %}" class="img-gal">
-                            <img class="img-fluid single-project" scr="{% static 'p3.jpg' %}" alt="">
-                        </a>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <a href="img/p4.jpg' %}" class="img-gal">
-                            <img class="img-fluid single-project" scr="{% static 'p4.jpg' %}" alt="">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End project Area -->
-
-        <!-- Start feedback Area -->
-        <section class="feedback-area section-gap relative" id="feedback">
-            <div class="overlay overlay-bg"></div>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-12 pb-30 header-text text-center">
-                        <h1 class="mb-10 text-white">Enjoy our Client’s Feedback</h1>
-                        <p class="text-white">
-                            Who are in extremely love with eco friendly system..
-                        </p>
-                    </div>
-                </div>
-                <div class="row feedback-contents justify-content-center align-items-center">
-                    <div class="col-lg-6 feedback-left relative d-flex justify-content-center align-items-center">
-                        <div class="overlay overlay-bg"></div>
-                        <a class="play-btn" href="https://www.youtube.com/watch?v=ARA0AxrnHdM"><img class="img-fluid" scr="{% static 'play-btn.png' %}" alt=""></a>
-                    </div>
-                    <div class="col-lg-6 feedback-right">
-                        <div class="active-review-carusel">
-                            <div class="single-feedback-carusel">
-                                <div class="title d-flex flex-row">
-                                    <h4 class="text-white pb-10">Fannie Rowe</h4>
-                                    <div class="star">
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star"></span>
-                                        <span class="fa fa-star"></span>
-                                    </div>
-                                </div>
-                                <p class="text-white">
-                                    Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
-                                </p>
-                            </div>
-                            <div class="single-feedback-carusel">
-                                <div class="title d-flex flex-row">
-                                    <h4 class="text-white pb-10">Fannie Rowe</h4>
-                                    <div class="star">
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star"></span>
-                                    </div>
-                                </div>
-                                <p class="text-white">
-                                    Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
-                                </p>
-                            </div>
-                            <div class="single-feedback-carusel">
-                                <div class="title d-flex flex-row">
-                                    <h4 class="text-white pb-10">Fannie Rowe</h4>
-                                    <div class="star">
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked	"></span>
-                                    </div>
-                                </div>
-                                <p class="text-white">
-                                    Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End feedback Area -->
-
-
-        <!-- Start blog Area -->
-        <section class="blog-area section-gap" id="blog">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-12 pb-30 header-text">
-                        <h1>Latest posts from our Blog</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> labore  et dolore magna aliqua.
-                        </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="single-blog col-lg-4 col-md-4">
-                        <div class="thumb">
-                            <img class="f-img img-fluid mx-auto" scr="{% static 'b1.jpg' %}" alt="">
-                        </div>
-                        <div class="bottom d-flex justify-content-between align-items-center flex-wrap">
-                            <div>
-                                <img class="img-fluid" scr="{% static 'user.png' %}" alt="">
-                                <a href="#"><span>Mark Wiens</span></a>
-                            </div>
-                            <div class="meta">
-                                13th Dec
-                                <span class="lnr lnr-heart"></span> 15
-                                <span class="lnr lnr-bubble"></span> 04
-                            </div>
-                        </div>
-                        <a href="#">
-                            <h4>Portable Fashion for young women</h4>
-                        </a>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip exea.
-                        </p>
-                    </div>
-                    <div class="single-blog col-lg-4 col-md-4">
-                        <div class="thumb">
-                            <img class="f-img img-fluid mx-auto" scr="{% static 'b2.jpg' %}" alt="">
-                        </div>
-                        <div class="bottom d-flex justify-content-between align-items-center flex-wrap">
-                            <div>
-                                <img class="img-fluid" scr="{% static 'user.png' %}" alt="">
-                                <a href="#"><span>Mark Wiens</span></a>
-                            </div>
-                            <div class="meta">
-                                13th Dec
-                                <span class="lnr lnr-heart"></span> 15
-                                <span class="lnr lnr-bubble"></span> 04
-                            </div>
-                        </div>
-                        <a href="#">
-                            <h4>Portable Fashion for young women</h4>
-                        </a>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip exea.
-                        </p>
-                    </div>
-                    <div class="single-blog col-lg-4 col-md-4">
-                        <div class="thumb">
-                            <img class="f-img img-fluid mx-auto" scr="{% static 'b3.jpg' %}" alt="">
-                        </div>
-                        <div class="bottom d-flex justify-content-between align-items-center flex-wrap">
-                            <div>
-                                <img class="img-fluid" scr="{% static 'user.png' %}" alt="">
-                                <a href="#"><span>Mark Wiens</span></a>
-                            </div>
-                            <div class="meta">
-                                13th Dec
-                                <span class="lnr lnr-heart"></span> 15
-                                <span class="lnr lnr-bubble"></span> 04
-                            </div>
-                        </div>
-                        <a href="#">
-                            <h4>Portable Fashion for young women</h4>
-                        </a>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip exea.
-                        </p>
-                    </div>
-
-
-                </div>
-            </div>
-        </section>
-        <!-- end blog Area -->
-
-        <!-- start footer Area -->
-        <footer class="footer-area section-gap">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-5 col-md-6 col-sm-6">
-                        <div class="single-footer-widget">
-                            <h6>About Us</h6>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.
-                            </p>
-                            <p class="footer-text">
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-5  col-md-6 col-sm-6">
-                        <div class="single-footer-widget">
-                            <h6>Newsletter</h6>
-                            <p>Stay update with our latest</p>
-                            <div class="" id="mc_embed_signup">
-                                <form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
-                                    <input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email">
-                                        <button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
-                                        <div style="position: absolute; left: -5000px;">
-                                            <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-                                        </div>
-
-                                    <div class="info"></div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6 col-sm-6 social-widget">
-                        <div class="single-footer-widget">
-                            <h6>Follow Us</h6>
-                            <p>Let us be social</p>
-                            <div class="footer-social d-flex align-items-center">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-dribbble"></i></a>
-                                <a href="#"><i class="fa fa-behance"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- End footer Area -->
-
-        <script src="{% static 'js/vendor/jquery-2.2.4.min.js'%}"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
-        <script src="{% static 'js/easing.min.js' %}"></script>
-        <script src="{% static 'js/hoverIntent.js' %}"></script>
-        <script src="{% static 'js/superfish.min.js' %}"></script>
-        <script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
-        <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
-        <script src="{% static 'js/owl.carousel.min.js' %}"></script>
-        <script src="{% static 'js/hexagons.min.js' %}"></script>
-        <script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
-        <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
-        <script src="{% static 'js/waypoints.min.js' %}"></script>
-        <script src="{% static 'js/mail-script.js' %}"></script>
-        <script src="{% static 'js/main.js' %}"></script>
-    </body>
+    <!-- jQuery JS -->
+    <script src="{% static "js/jquery-1.12.0.min.js" %}"></script>
+    <!-- Bootstrap JS -->
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+    <!-- Animate JS -->
+    <script src="{% static "vendors/animate/wow.min.js" %}"></script>
+    <!-- Camera Slider -->
+    <script src="{% static "vendors/camera-slider/jquery.easing.1.3.js" %}"></script>
+    <script src="{% static "vendors/camera-slider/camera.min.js" %}"></script>
+    <!-- Isotope JS -->
+    <script src="{% static "vendors/isotope/imagesloaded.pkgd.min.js" %}"></script>
+    <script src="{% static "vendors/isotope/isotope.pkgd.min.js" %}"></script>
+    <!-- Progress JS -->
+    <script src="{% static "vendors/Counter-Up/jquery.counterup.min.js" %}"></script>
+    <script src="{% static "vendors/Counter-Up/waypoints.min.js" %}"></script>
+    <!-- Owlcarousel JS -->
+    <script src="{% static "vendors/owl_carousel/owl.carousel.min.js" %}"></script>
+    <!-- Stellar JS -->
+    <script src="{% static "vendors/stellar/jquery.stellar.js" %}"></script>
+    <!-- Theme JS -->
+    <script src="{% static "js/theme.js" %}"></script>
+</body>
 </html>
-
-
-
