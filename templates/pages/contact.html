@@ -38,10 +38,10 @@
 
     <!-- Banner area -->
     <section class="banner_area" data-stellar-background-ratio="0.5">
-        <h2>Contact Us</h2>
+        <h2>Fale Conosco</h2>
         <ol class="breadcrumb">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#" class="active">Contact Us</a></li>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'contact' %}" class="active">Fale Conosco</a></li>
         </ol>
     </section>
     <!-- End Banner area -->
@@ -71,7 +71,7 @@
                     </div>
                 </div>
                 <div class="col-sm-6 contact_info send_message">
-                    <h2>Send Us a Message</h2>
+                    <h2>Envie-nos uma mensagem</h2>
                     <form class="form-inline contact_box" method="post" action="{% url 'contact' %}">
                         {% csrf_token %}
                         {{ form.from_name }}
@@ -79,7 +79,7 @@
                         {{ form.subject }}
                         {{ form.message }}
 
-                        <button type="submit">Send</button>
+                        <button type="submit">Enviar</button>
 
                     </form>
                 </div>
