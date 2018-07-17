@@ -19,13 +19,13 @@ def contact(request):
             subject = form.cleaned_data['subject']
             message = form.cleaned_data['message']
             try:
-                send_mail(subject, message, from_name + ' <' + from_email + '>', ['tiago@mulhergorila.com'])
+                send_mail(subject, message,
+                          from_name + ' <' + from_email + '>',
+                          ['tiago@mulhergorila.com'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect('success')
     return render(request, "pages/contact.html", {'form': form})
-
-    # return render(request, 'pages/contact.html')
 
 
 def success(request):
