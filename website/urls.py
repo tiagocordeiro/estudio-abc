@@ -28,11 +28,5 @@ admin.site.site_header = 'Estúdio ABC'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('pages.urls')),
-    url(
-        r'^favicon.ico$',
-        RedirectView.as_view(
-            url=staticfiles_storage.url('favicon.ico'),
-            permanent=False),
-        name="favicon"
-    ),
+    url(r'^', include('favicon.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

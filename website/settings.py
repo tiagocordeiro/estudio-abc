@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
+    'favicon',
 
     # My Apps
     'pages',
@@ -136,6 +137,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 COLLECTFAST_ENABLED = False
+
+FAVICON_PATH = STATIC_URL + 'images/favicon.png'
 
 # Configure Django App for Heroku.
 django_heroku.settings(locals())
