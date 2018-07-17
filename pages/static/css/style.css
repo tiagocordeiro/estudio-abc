@@ -1,3 +1,4 @@
+{% load static from staticfiles %}
 /*----------------------------------------------------
 @File: Default Styles
 @Author: Colorlib
@@ -139,7 +140,7 @@ This files contents are outlined below.
   background-color: #ffffff;
   background-position: center center;
   background-repeat: no-repeat;
-  background-image: url(../images/preloader.gif);
+  background-image: url({% static 'images/preloader.gif' %});
 }
 
 /*--------------------------------------------------*/
