@@ -148,7 +148,7 @@ COLLECTFAST_ENABLED = False
 django_heroku.settings(locals())
 
 # Email config
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # # Configure Email
 EMAIL_HOST = config('EMAIL_HOST', default='localhost')
