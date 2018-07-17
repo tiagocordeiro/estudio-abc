@@ -47,7 +47,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -104,8 +104,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# Redirect to home URL after login #TODO(Default redirects to /accounts/profile/)
-LOGIN_REDIRECT_URL = '/'
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
@@ -119,6 +117,9 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+# Redirect to home URL after login # TODO(Default redirects to /accounts/profile/)
+LOGIN_REDIRECT_URL = '/'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
