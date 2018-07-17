@@ -5,7 +5,7 @@ python:
 install: "pip install -r requirements-dev.txt"
 # command to run tests
 script:
-  - flake8 casaconceito/ parceiros/ pages/
+  - flake8 website/ pages/
 #  - python manage.py test -v 2
 #  - py.test --cov=pytocli tests/
 #  - python -m doctest README.md
