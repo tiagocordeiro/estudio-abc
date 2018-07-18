@@ -556,7 +556,7 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
 /* End slider_area_tow */
 /* Banner Area */
 .banner_area {
-  background: url("https://res.cloudinary.com/hp6gsemlc/image/upload/v1531942374/assets/quem-somos-banner-slim.jpg") no-repeat fixed;
+  background: url("https://res.cloudinary.com/hp6gsemlc/image/upload/v1531832447/assets/banner-bg.jpg") no-repeat fixed;
   background-position: center;
   text-align: center;
   position: relative;
@@ -2042,7 +2042,7 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
 /* End All contact Info Css */
 /*--------------------------------------------------*/
 .footer_area {
-  background: url("https://res.cloudinary.com/hp6gsemlc/image/upload/v1531832554/assets/footer.jpg") no-repeat;
+  background: url("https://res.cloudinary.com/hp6gsemlc/image/upload/v1531942225/assets/quem-somo-bg.jpg") no-repeat;
   position: relative;
   background-size: cover;
   background-position: center;

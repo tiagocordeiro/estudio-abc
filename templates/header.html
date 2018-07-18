@@ -1,19 +1,22 @@
 {% load static from staticfiles %}
 <!-- Top Header_Area -->
-<section class="top_header_area">
+<section class="top_header_area" align="center">
     <div class="container">
         <ul class="nav navbar-nav top_nav">
-            <li><a href="#"><i class="fa fa-phone"></i>(11) 4994-7063</a></li>
-            <li><a href="#"><i class="fa fa-envelope-o"></i>central@estudioabc.com.br</a></li>
-            <li><a href="#"><i class="fa fa-clock-o"></i>Seg - Sex 08:00 - 18:00</a></li>
+            <li><a href="#"><i class="fa fa-phone"  style="vertical-align: text-top;"></i>(11) 4994-7063</a></li>
+            <li><a href="{% url 'contact' %}"><i class="fa fa-envelope-o" style="vertical-align: text-top;"></i>contato</a></li>
         </ul>
+        <!--
         <ul class="nav navbar-nav navbar-right social_nav">
             <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
             <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
             <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
             <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+        </ul>
+        -->
+        <ul class="nav navbar-nav navbar-right top_nav">
+            <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> Minha Conta</a></li>
         </ul>
     </div>
 </section>
