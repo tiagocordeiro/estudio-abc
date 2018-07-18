@@ -51,7 +51,7 @@
     <section class="about_us_area row">
         <div class="container">
             <div class="tittle wow fadeInUp">
-                <h2>Quem Somos</h2>
+                <h2>Nossa Empresa</h2>
                 <h4>O Estudio ABC é uma empresa que compartilha tecnologia de ultima geração com produtores gráficos, diretores de arte, designers, decoradores, arquitetos e artistas; que buscam a perfeição para reproduzir seus impressos e suas imagens.</h4>
             </div>
             <div class="row about_row">
@@ -59,12 +59,14 @@
                     <img src="{% static 'images/feature-man-3.jpg' %}" alt="">
                 </div>
                 <div class="who_we_area col-md-7 col-sm-6">
-                    <p>Estamos afinados com a evolução do segmento, acompanhamos e  investimos  continuamente  em recursos, para oferecermos os melhores resultados.
-                    <br>Para a indústria gráfica, mantemos um setor completo  com o que existe de mais atual para gravação a laser de chapas e fotolitos; nosso fluxo de produção é 100% digital, proporcionando um processo rápido e seguro.
-                    <br>São mais de 15 anos participando da rotina da indústria gráfica, buscando sempre o aumento nos ganhos obtidos na produção de impressos, reduzindo custos e abreviando prazos nos processos que antecedem a impressão.
-                    <br>Para o mercado das artes dispomos de tecnologia e processos digitais de impressão de última geração; com qualidade inigualável para reprodução de fotografias e obras de arte em papeis especiais e nos mais variados suportes.
-                    <br>O Estudio ABC é a extensão do seu espaço de trabalho, uma ponte que estabelece a união da arte com a tecnologia.</p>
-                    <a href="{% url 'contact' %}" class="button_all">Fale Conosco</a>
+                    <div class="subtittle">
+                        <h2>Expertise</h2>
+                    </div>
+                    <p>Estamos afinados com a evolução do segmento, acompanhamos e  investimos  continuamente  em recursos, para oferecermos os melhores resultados.<br>
+                    Para a indústria gráfica, mantemos um setor completo  com o que existe de mais atual para gravação a laser de chapas e fotolitos; nosso fluxo de produção é 100% digital, proporcionando um processo rápido e seguro.<br>
+                    São mais de 15 anos participando da rotina da indústria gráfica, buscando sempre o aumento nos ganhos obtidos na produção de impressos, reduzindo custos e abreviando prazos nos processos que antecedem a impressão.<br>
+                    Para o mercado das artes dispomos de tecnologia e processos digitais de impressão de última geração; com qualidade inigualável para reprodução de fotografias e obras de arte em papeis especiais e nos mais variados suportes.<br>
+                    O Estudio ABC é a extensão do seu espaço de trabalho, uma ponte que estabelece a união da arte com a tecnologia.</p>
                 </div>
             </div>
         </div>
@@ -74,11 +76,10 @@
     <!-- call Area -->
     <section class="call_min_area">
         <div class="container">
-            <h2>+880 123 456 789</h2>
-            <p>Contact With Us. We are the top Construction Company. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h2>(11) 4994-7063</h2>
+            <p>Entre em contato conosco, solicite uma visita.</p>
             <div class="call_btn">
-                <a href="#" class="button_all">GET IN TOUCH</a>
-                <a href="#" class="button_all">QUICK QUOTE</a>
+                <a href="{% url 'contact' %}" class="button_all">Fale Conosco</a>
             </div>
         </div>
     </section>
