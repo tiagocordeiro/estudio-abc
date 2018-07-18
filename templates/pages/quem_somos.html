@@ -1,0 +1,114 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Estudio ABC</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static "images/favicon.png" %}" type="image/x-icon" />
+    <!-- Bootstrap CSS -->
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+    <!-- Animate CSS -->
+    <link href="{% static "vendors/animate/animate.css" %}" rel="stylesheet">
+    <!-- Icon CSS-->
+	<link rel="stylesheet" href="{% static "vendors/font-awesome/css/font-awesome.min.css" %}">
+    <!-- Camera Slider -->
+    <link rel="stylesheet" href="{% static "vendors/camera-slider/camera.css" %}">
+    <!-- Owlcarousel CSS-->
+	<link rel="stylesheet" type="text/css" href="{% static "vendors/owl_carousel/owl.carousel.css" %}" media="all">
+
+    <!--Theme Styles CSS-->
+	<link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}" media="all" />
+
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="{% static "js/html5shiv.min.js" %}"></script>
+    <script src="{% static "js/respond.min.js" %}"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader"></div>
+
+	{% include 'header.html' %}
+
+    <!-- Banner area -->
+    <section class="banner_area" data-stellar-background-ratio="0.5">
+        <h2>Quem Somos</h2>
+        <ol class="breadcrumb">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about-us' %}" class="active">Quem Somos</a></li>
+        </ol>
+    </section>
+    <!-- End Banner area -->
+
+
+    <!-- About Us Area -->
+    <section class="about_us_area row">
+        <div class="container">
+            <div class="tittle wow fadeInUp">
+                <h2>Quem Somos</h2>
+                <h4>O Estudio ABC é uma empresa que compartilha tecnologia de ultima geração com produtores gráficos, diretores de arte, designers, decoradores, arquitetos e artistas; que buscam a perfeição para reproduzir seus impressos e suas imagens.</h4>
+            </div>
+            <div class="row about_row">
+                <div class="col-md-5 col-sm-6 about_client about_pages_client">
+                    <img src="{% static 'images/feature-man-3.jpg' %}" alt="">
+                </div>
+                <div class="who_we_area col-md-7 col-sm-6">
+                    <p>Estamos afinados com a evolução do segmento, acompanhamos e  investimos  continuamente  em recursos, para oferecermos os melhores resultados.
+                    <br>Para a indústria gráfica, mantemos um setor completo  com o que existe de mais atual para gravação a laser de chapas e fotolitos; nosso fluxo de produção é 100% digital, proporcionando um processo rápido e seguro.
+                    <br>São mais de 15 anos participando da rotina da indústria gráfica, buscando sempre o aumento nos ganhos obtidos na produção de impressos, reduzindo custos e abreviando prazos nos processos que antecedem a impressão.
+                    <br>Para o mercado das artes dispomos de tecnologia e processos digitais de impressão de última geração; com qualidade inigualável para reprodução de fotografias e obras de arte em papeis especiais e nos mais variados suportes.
+                    <br>O Estudio ABC é a extensão do seu espaço de trabalho, uma ponte que estabelece a união da arte com a tecnologia.</p>
+                    <a href="{% url 'contact' %}" class="button_all">Fale Conosco</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End About Us Area -->
+
+    <!-- call Area -->
+    <section class="call_min_area">
+        <div class="container">
+            <h2>+880 123 456 789</h2>
+            <p>Contact With Us. We are the top Construction Company. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="call_btn">
+                <a href="#" class="button_all">GET IN TOUCH</a>
+                <a href="#" class="button_all">QUICK QUOTE</a>
+            </div>
+        </div>
+    </section>
+    <!-- End call Area -->
+
+    {% include 'footer.html' %}
+
+    <!-- jQuery JS -->
+    <script src="{% static "js/jquery-1.12.0.min.js" %}"></script>
+    <!-- Bootstrap JS -->
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+    <!-- Animate JS -->
+    <script src="{% static "vendors/animate/wow.min.js" %}"></script>
+    <!-- Camera Slider -->
+    <script src="{% static "vendors/camera-slider/jquery.easing.1.3.js" %}"></script>
+    <script src="{% static "vendors/camera-slider/camera.min.js" %}"></script>
+    <!-- Isotope JS -->
+    <script src="{% static "vendors/isotope/imagesloaded.pkgd.min.js" %}"></script>
+    <script src="{% static "vendors/isotope/isotope.pkgd.min.js" %}"></script>
+    <!-- Progress JS -->
+    <script src="{% static "vendors/Counter-Up/jquery.counterup.min.js" %}"></script>
+    <script src="{% static "vendors/Counter-Up/waypoints.min.js" %}"></script>
+    <!-- Owlcarousel JS -->
+    <script src="{% static "vendors/owl_carousel/owl.carousel.min.js" %}"></script>
+    <!-- Stellar JS -->
+    <script src="{% static "vendors/stellar/jquery.stellar.js" %}"></script>
+    <!-- Map JS -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js"></script> -->
+    <!-- <script src="{% static "vendors/map/topbuilder_map.min.js" %}"></script> -->
+    <!-- Theme JS -->
+    <script src="{% static "js/theme.js" %}"></script>
+</body>
+</html>

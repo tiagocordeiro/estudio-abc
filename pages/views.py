@@ -8,6 +8,10 @@ def home(request):
     return render(request, 'pages/index.html')
 
 
+def about(request):
+    return render(request, 'pages/quem_somos.html')
+
+
 def contact(request):
     if request.method == 'GET':
         form = ContactForm()
