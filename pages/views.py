@@ -34,3 +34,7 @@ def contact(request):
 
 def success(request):
     return render(request, 'pages/obrigado.html')
+
+
+def embreve(request):
+    return render(request, 'pages/em_breve.html')
