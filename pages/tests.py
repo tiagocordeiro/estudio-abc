@@ -1,11 +1,10 @@
 import pytest
-from django.conf import settings
-from django.test import Client
-from django.urls import reverse
+# from django.conf import settings
+# from django.test import Client
+# from django.urls import reverse
 
 
-from website.django_assertions import dj_assert_contains, \
-    dj_assert_not_contains, dj_assert_template_used
+from website.django_assertions import dj_assert_template_used
 
 
 @pytest.fixture
