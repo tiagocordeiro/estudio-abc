@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect
 
-
 from .models import Document
 from .forms import DocumentForm
 
