@@ -37,7 +37,7 @@ class Fotolito(models.Model):
     camada = models.CharField(max_length=20,
                               choices=CAMADA_CHOICES, default='LEGIVEL')
     lineatura = models.CharField(max_length=10,
-                                 choices=LINEATURA_CHOICES, default=175)
+                                 choices=LINEATURA_CHOICES, default='175')
     arquivo = models.FileField(
         upload_to='documents/%Y/%m/%d/')
     recomendacoes = models.TextField()
