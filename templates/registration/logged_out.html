@@ -1,7 +1,19 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-<p>Logged out!</p>  
 
-<a href="{% url 'login'%}">Click here to login again.</a>
+<!-- Logged out Area -->
+<section class="about_us_area row">
+    <div class="container">
+        <div class="tittle wow fadeInUp">
+            <h2>Logged out!</h2>
+            <h4>Desconectado</h4>
+            <div style="padding: 40px 0 90px;">
+                <a href="{% url 'login'%}" class="button_all center-block">Login</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Logged out Area -->
+
 {% endblock %}
