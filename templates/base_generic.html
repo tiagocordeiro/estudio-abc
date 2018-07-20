@@ -24,6 +24,9 @@
     <!--Theme Styles CSS-->
 	<link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}" media="all" />
 
+    {% block extracss %}
+    {% endblock %}
+
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="{% static "js/html5shiv.min.js" %}"></script>
@@ -63,5 +66,9 @@
     <script src="{% static "vendors/stellar/jquery.stellar.js" %}"></script>
     <!-- Theme JS -->
     <script src="{% static "js/theme.js" %}"></script>
+
+    {% block extrascripts %}
+    {% endblock %}
+
 </body>
 </html>

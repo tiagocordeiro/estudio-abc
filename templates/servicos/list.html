@@ -1,0 +1,100 @@
+{% extends "base_generic.html" %}
+
+{% block extracss %}
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" media="all" />
+    <style>
+    .pagination>.active>a {
+        background-color: #b78923;
+        border-color: #b78923;
+    }
+    .pagination>.active>a:hover {
+        border: 1px solid #524618;
+        background-color: #585858;
+        background: linear-gradient(to bottom, #524618 0%, #b78923 100%);
+    }
+    .badge-red {
+        background-color: red;
+    }
+    </style>
+{% endblock %}
+
+{% block content %}
+
+<!-- Título Area -->
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-lg-12" style="padding-bottom: 40px; padding-top: 30px;">
+                <h2>Serviços</h2>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Título Area -->
+
+<!-- Serviços List -->
+<section class="all_contact_info">
+    <div class="container">
+        <div class="row">
+            <div class="table-responsive">
+                <table id="servicos" class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Título</th>
+                    <th>Adicionado por</th>
+                    <th>Data</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                {% for fotolito in fotolitos %}
+                  <tr>
+                    <td>{{ fotolito.titulo }}</td>
+                    <td>{{ fotolito.added_by }}</td>
+                    <td>{{ fotolito.created_date }}</td>
+                    <td><a href="#"><button type="button" class="btn btn-sm btn-primary">Status</button></a></td>
+                  </tr>
+                {% endfor %}
+                </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <p>Exemplos para uso na coluna Status</p>
+            <button type="button" class="btn btn-sm btn-primary">Primary</button>
+            <button type="button" class="btn btn-sm btn-success">Success</button>
+            <button type="button" class="btn btn-sm btn-danger">Danger</button>
+            <button type="button" class="btn btn-sm btn-warning">Warning</button>
+            <button type="button" class="btn btn-sm btn-info">Info</button>
+            <span class="badge badge-primary">Primary</span>
+            <span class="badge badge-red">Status</span>
+        </div>
+    </div>
+</section>
+<!-- End Serviços List -->
+
+
+
+<!-- Prefooter Area -->
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-lg-12" style="padding-bottom: 40px; padding-top: 30px;">
+                <p></p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Prefooter Area -->
+
+{% endblock %}
+
+{% block extrascripts %}
+    <script>
+    $(document).ready(function() {
+        $('#servicos').DataTable();
+    } );
+    </script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+{% endblock %}
