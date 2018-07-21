@@ -1,0 +1,102 @@
+{% extends "base_generic.html" %}
+
+{% block extracss %}
+    <style>
+    .subformtitle h2::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 20px;
+        background: #f6b60b;
+        left: 0;
+        bottom: 0;
+    }
+    </style>
+{% endblock %}
+
+{% block content %}
+
+
+<!-- All contact Info -->
+<section class="all_contact_info">
+    <div class="container">
+        <div class="row contact_row">
+            <div class="col-sm-6 contact_info send_message" style="padding-bottom: 40px;">
+                <h2>Solicitar Fotolito</h2>
+                <form class="form-inline contact_box" method="post" enctype="multipart/form-data" action="{% url 'upload_fotolito' %}">
+                    {% csrf_token %}
+                    {{ form.titulo }}
+                    <div class="col-xs-12" style="padding-bottom: 10px;">
+                        <h4>Medidas:</h4>
+                    </div>
+                    <div class="col-xs-6">
+                        {{ form.altura }}
+                    </div>
+                    <div class="col-xs-6">
+                        {{ form.largura }}
+                    </div>
+
+                    <div class="col-xs-4">
+                        {{ form.cores.label_tag }}
+                        {{ form.cores }}
+                    </div>
+                    <div class="col-xs-4">
+
+                        {{ form.finalidade.label_tag }}
+                    {{ form.finalidade }}
+                    </div>
+                    <div class="col-xs-4">
+                    {{ form.camada.label_tag }}
+                    {{ form.camada }}
+
+                    </div>
+                    {{ form.lineatura }}
+                    {{ form.arquivo }}
+                    {{ form.recomendacoes }}
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+            <div class="col-sm-6 contact_info">
+                <h2>Informações para contato</h2>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+                <div class="location">
+                    <div class="location_laft">
+                        <a class="f_location" href="#">localização</a>
+                        <a href="#">telefone</a>
+                        <a href="#">email</a>
+                    </div>
+                    <div class="address">
+                        <a href="#">Rua Garcia Rodrigues, 677 <br>Vila Guiomar, Santo André - SP</a>
+                        <a href="#">(11) 4994-7063</a>
+                        <a href="#">central@estudioabc.com.br</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End All contact Info -->
+
+<!-- Prefooter Area -->
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-lg-12" style="padding-bottom: 40px; padding-top: 30px;">
+                <p></p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Prefooter Area -->
+
+{% endblock %}
+
+
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="hidden" name="added_by" value="{{ request.user }}" />
+    <button type="submit">Upload</button>
+  </form>
+
+  <p><a href="{% url 'home' %}">Return to home</a></p>
