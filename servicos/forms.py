@@ -1,4 +1,4 @@
-from django.forms import ModelForm, TextInput
+from django.forms import ModelForm, TextInput, Select, Textarea, FileInput
 from .models import Fotolito
 
 
@@ -18,4 +18,12 @@ class FotolitoForm(ModelForm):
             'largura': TextInput(attrs={'class': 'form-control input_box',
                                         'type': 'tel',
                                         'placeholder': 'Largura (em milimetros)', }),
+            'cores': TextInput(attrs={'class': 'form-control input_box',
+                                      'placeholder': 'Ex. 4x1', }),
+            'finalidade': Select(attrs={'class': 'form-control input_box'}),
+            'camada': Select(attrs={'class': 'form-control input_box'}),
+            'lineatura': Select(attrs={'class': 'form-control input_box'}),
+            'arquivo': FileInput(attrs={'class': 'form-control input_box'}),
+            'recomendacoes': Textarea(attrs={'class': 'form-control input_box'}),
+            'aprovacao': Select(attrs={'class': 'form-control input_box'}),
         }

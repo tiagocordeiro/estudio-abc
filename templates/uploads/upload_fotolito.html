@@ -21,43 +21,58 @@
 <section class="all_contact_info">
     <div class="container">
         <div class="row contact_row">
-            <div class="col-sm-6 contact_info send_message" style="padding-bottom: 40px;">
+            <div class="col-sm-8 contact_info send_message" style="padding-bottom: 40px;">
                 <h2>Solicitar Fotolito</h2>
-                <form class="form-inline contact_box" method="post" enctype="multipart/form-data" action="{% url 'upload_fotolito' %}">
+                <form class="form-inline contact_box" method="post" enctype="multipart/form-data">
                     {% csrf_token %}
-                    {{ form.titulo }}
-                    <div class="col-xs-12" style="padding-bottom: 10px;">
-                        <h4>Medidas:</h4>
+                    <div class="col-md-12">
+                        {{ form.titulo.label_tag }}
+                        {{ form.titulo}}
                     </div>
-                    <div class="col-xs-6">
+                    <div class="col-md-6">
+                        {{ form.altura.label_tag }}
                         {{ form.altura }}
                     </div>
-                    <div class="col-xs-6">
+                    <div class="col-md-6">
+                        {{ form.largura.label_tag }}
                         {{ form.largura }}
                     </div>
-
-                    <div class="col-xs-4">
+                    <div class="col-md-6">
                         {{ form.cores.label_tag }}
                         {{ form.cores }}
                     </div>
-                    <div class="col-xs-4">
-
+                    <div class="col-md-6">
                         {{ form.finalidade.label_tag }}
-                    {{ form.finalidade }}
+                        {{ form.finalidade }}
                     </div>
-                    <div class="col-xs-4">
-                    {{ form.camada.label_tag }}
-                    {{ form.camada }}
-
+                    <div class="col-md-6">
+                        {{ form.camada.label_tag }}
+                        {{ form.camada }}
                     </div>
-                    {{ form.lineatura }}
-                    {{ form.arquivo }}
-                    {{ form.recomendacoes }}
-                    <button type="submit">Enviar</button>
+                    <div class="col-md-6">
+                        {{ form.lineatura.label_tag }}
+                        {{ form.lineatura }}
+                    </div>
+                    <div class="col-md-6">
+                        {{ form.arquivo.label_tag }}
+                        {{ form.arquivo }}
+                    </div>
+                    <div class="col-md-6">
+                        {{ form.aprovacao.label_tag }}
+                        {{ form.aprovacao }}
+                    </div>
+                    <div class="col-md-12">
+                        {{ form.recomendacoes.label_tag }}
+                        {{ form.recomendacoes }}
+                    </div>
+                    <div class="col-md-6">
+                        <button type="submit">Upload</button>
+                    </div>
                 </form>
             </div>
-            <div class="col-sm-6 contact_info">
-                <h2>Informações para contato</h2>
+
+            <div class="col-sm-4 contact_info">
+                <h2>Informações importantes</h2>
                 <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
                 <div class="location">
                     <div class="location_laft">
@@ -90,13 +105,3 @@
 <!-- End Prefooter Area -->
 
 {% endblock %}
-
-
-  <form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="hidden" name="added_by" value="{{ request.user }}" />
-    <button type="submit">Upload</button>
-  </form>
-
-  <p><a href="{% url 'home' %}">Return to home</a></p>
