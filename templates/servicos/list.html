@@ -36,28 +36,26 @@
 <section class="all_contact_info">
     <div class="container">
         <div class="row">
-            <div class="table-responsive">
-                <table id="servicos" class="table table-striped">
-                <thead>
-                  <tr>
-                    <th>Título</th>
-                    <th>Adicionado por</th>
-                    <th>Data</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                {% for fotolito in fotolitos %}
-                  <tr>
-                    <td>{{ fotolito.titulo }}</td>
-                    <td>{{ fotolito.added_by }}</td>
-                    <td>{{ fotolito.created_date }}</td>
-                    <td><a href="#"><button type="button" class="btn btn-sm btn-primary">Status</button></a></td>
-                  </tr>
-                {% endfor %}
-                </tbody>
-                </table>
-            </div>
+            <table id="servicos" class="table table-striped">
+            <thead>
+              <tr>
+                <th>Título</th>
+                <th>Adicionado por</th>
+                <th>Data</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+            {% for fotolito in fotolitos %}
+              <tr>
+                <td>{{ fotolito.titulo }}</td>
+                <td>{{ fotolito.added_by }}</td>
+                <td>{{ fotolito.created_date }}</td>
+                <td><a href="#"><button type="button" class="btn btn-sm btn-primary">Status</button></a></td>
+              </tr>
+            {% endfor %}
+            </tbody>
+            </table>
         </div>
         <div class="row">
             <p>Exemplos para uso na coluna Status</p>
@@ -92,7 +90,9 @@
 {% block extrascripts %}
     <script>
     $(document).ready(function() {
-        $('#servicos').DataTable();
+        $('#servicos').DataTable( {
+            "order": [[ 2, "desc" ]]
+        });
     } );
     </script>
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
