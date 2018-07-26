@@ -38,8 +38,7 @@ class Fotolito(models.Model):
                               choices=CAMADA_CHOICES, default='LEGIVEL')
     lineatura = models.CharField(max_length=10,
                                  choices=LINEATURA_CHOICES, default='175')
-    arquivo = models.FileField(
-        upload_to='documents/%Y/%m/%d/')
+    arquivo = models.FileField(upload_to='documents/%Y/%m/%d/')
     recomendacoes = models.TextField()
     aprovacao = models.CharField(max_length=50,
                                  choices=APROVACAO_CHOICES, default='NÃO')

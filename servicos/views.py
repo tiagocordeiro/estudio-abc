@@ -16,7 +16,9 @@ def fotolito_upload(request):
     if request.method == 'POST':
         form = FotolitoForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            fotolito = form.save(commit=False)
+            fotolito.added_by = request.user
+            fotolito.save()
             return redirect('servicos_list')
     else:
         form = FotolitoForm()

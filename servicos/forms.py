@@ -26,4 +26,5 @@ class FotolitoForm(ModelForm):
             'arquivo': FileInput(attrs={'class': 'form-control input_box'}),
             'recomendacoes': Textarea(attrs={'class': 'form-control input_box'}),
             'aprovacao': Select(attrs={'class': 'form-control input_box'}),
+            'added_by': TextInput(attrs={'type': 'hidden'}),
         }
