@@ -1915,20 +1915,20 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
 .not_found_area .search_error input {
   border: 1px solid #dfe3e4;
   box-shadow: none;
-  color: #d3dadf;
+  color: #636363;
   height: 50px;
   display: block;
   border-radius: 0;
   padding-left: 20px;
 }
 .not_found_area .search_error input.placeholder {
-  color: #d3dadf;
+  color: #636363;
 }
 .not_found_area .search_error input:-moz-placeholder {
-  color: #d3dadf;
+  color: #636363;
 }
 .not_found_area .search_error input::-webkit-input-placeholder {
-  color: #d3dadf;
+  color: #636363;
 }
 .not_found_area .search_error a {
   line-height: 50px;
@@ -1936,7 +1936,7 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
   right: 0px;
   bottom: 0px;
   width: 50px;
-  color: #d3dadf;
+  color: #636363;
 }
 .not_found_area .search_error:hover a, .not_found_area .search_error:focus a {
   background: #f6b60b;
@@ -2008,17 +2008,17 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
   height: 50px;
   padding-left: 15px;
   width: 100%;
-  color: #d3dadf;
+  color: #636363;
   margin-bottom: 20px;
 }
 .all_contact_info .contact_row .send_message .contact_box .input_box.placeholder {
-  color: #d3dadf;
+  color: #636363;
 }
 .all_contact_info .contact_row .send_message .contact_box .input_box:-moz-placeholder {
-  color: #d3dadf;
+  color: #636363;
 }
 .all_contact_info .contact_row .send_message .contact_box .input_box::-webkit-input-placeholder {
-  color: #d3dadf;
+  color: #636363;
 }
 .all_contact_info .contact_row .send_message .contact_box textarea {
   height: 120px !important;

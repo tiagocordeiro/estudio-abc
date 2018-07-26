@@ -32,8 +32,8 @@
 
                 <form class="form-inline contact_box" method="post" action="{% url 'login' %}">
                     {% csrf_token %}
-                    <input type="text" name="username" autofocus="" maxlength="254" class="form-control input_box" placeholder="Username" required="" id="id_username">
-                    <input type="password" name="password" class="form-control input_box" placeholder="Username" required="" id="id_password">
+                    <input type="text" name="username" autofocus="" maxlength="254" class="form-control input_box" placeholder="Usuário" required="" id="id_username">
+                    <input type="password" name="password" class="form-control input_box" placeholder="Senha" required="" id="id_password">
                     <button type="submit" value="login" name="login">
                         Entrar <i class="fa fa-chevron-right"></i>
                     </button>
