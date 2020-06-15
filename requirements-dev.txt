@@ -6,7 +6,7 @@ atomicwrites==1.4.0
 attrs==19.3.0
 more-itertools==8.3.0
 pluggy==0.13.1
-py==1.8.1
+py==1.8.2
 pytest==5.4.3
 coverage==5.1
 pytest-cov==2.9.0
