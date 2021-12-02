@@ -1,5 +1,5 @@
 flake8==3.8.4
-pytest-django==4.1.0
+pytest-django==4.5.1
 pytest-cov==2.11.1
 
 # Faker
