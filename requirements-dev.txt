@@ -3,7 +3,7 @@ pytest-django==4.1.0
 pytest-cov==2.11.1
 
 # Faker
-Faker==6.4.1
+Faker==24.14.0
 
 
 -r requirements.txt
